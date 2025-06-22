@@ -1,0 +1,11 @@
+name: Call Echo Workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-workflow:
+    uses: koushik309/Workflows/.github/workflows/reusable-echo.yml@main
+    with:
+      message: "Hello from backendmain"
