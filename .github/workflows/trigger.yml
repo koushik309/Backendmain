@@ -1,0 +1,15 @@
+name: Trigger Pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Orchestration Action
+        uses: koushik309/Actions/custom-processor@main
+        with:
+          input_data: 'Initial data from backend'
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
