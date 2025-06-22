@@ -1,0 +1,11 @@
+# .github/workflows/orchestrate.yml
+name: Orchestrate Cross-Repo Jobs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger-custom-action:
+    uses: koushik309/Actions/echo-task@main
+    with:
+      message: "Start execution"
